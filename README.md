@@ -8,6 +8,7 @@ The following metrics are collected:
 ### RStudio Server
 	
 	- R session count
+	- R session total memory usage
 	- R session mean memory usage
 	- R session max memory usage
 	- R session mean session length
@@ -16,14 +17,17 @@ The following metrics are collected:
 ### SAS Studio
 
 	- SAS session count
+	- SAS session total memory usage
 	- SAS session mean memory usage
 	- SAS session max memory usage
 	- SAS session mean session length
 	- SAS session max session length
 
-	- SAS session count
-	- SAS session mean memory usage
-	- SAS session max memory usage
-	- SAS session mean session length
-	- SAS session max session length
+### Jupyterhub
 
+	- Jupyter notebook count
+	- Jupyter notebook total memory usage
+	- Jupyter notebook mean memory usage
+	- Jupyter notebook max memory usage
+	- Jupyter notebook mean session length
+	- Jupyter notebook max session length
