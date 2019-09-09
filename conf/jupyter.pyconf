@@ -1,0 +1,42 @@
+modules {
+  module {
+    name     = "jupyter"
+    language = "python"
+  }
+}
+
+collection_group {
+  collect_every  = 300
+  time_threshold = 60
+
+  metric {
+    name = "jupyter_count"
+    title = "Jupyter notebook sessions"
+    value_threshold = 25
+  }
+  metric {
+    name = "jupyter_total_mem"
+    title = "Jupyter notebook total memory usage (RSS)"
+    value_threshold = 384.0
+  }
+  metric {
+    name = "jupyter_avg_mem"
+    title = "Jupyter notebook average memory usage per session (RSS)"
+    value_threshold = 64.0
+  }
+  metric {
+    name = "jupyter_max_mem"
+    title = "Jupyter notebook max memory usage per session (RSS)"
+    value_threshold = 128.0
+  }
+  metric {
+    name = "jupyter_avg_session_length"
+    title = "Jupyter notebook average session length"
+    value_threshold = 120.0
+  }
+  metric {
+    name = "jupyter_max_session_length"
+    title = "Jupyter notebook max session length"
+    value_threshold = 1440.0
+  }
+}
