@@ -1,0 +1,42 @@
+modules {
+  module {
+    name     = "rsession"
+    language = "python"
+  }
+}
+
+collection_group {
+  collect_every  = 300
+  time_threshold = 60
+
+  metric {
+    name = "rsession_count"
+    title = "RStudio Server sessions"
+    value_threshold = 25
+  }
+  metric {
+    name = "rsession_total_mem"
+    title = "RStudio Server total memory usage (RSS)"
+    value_threshold = 384.0
+  }
+  metric {
+    name = "rsession_avg_mem"
+    title = "RStudio Server average memory usage per session (RSS)"
+    value_threshold = 64.0
+  }
+  metric {
+    name = "rsession_max_mem"
+    title = "RStudio Server max memory usage per session (RSS)"
+    value_threshold = 128.0
+  }
+  metric {
+    name = "rsession_avg_session_length"
+    title = "RStudio Server average session length"
+    value_threshold = 120.0
+  }
+  metric {
+    name = "rsession_max_session_length"
+    title = "RStudio Server max session length"
+    value_threshold = 1440.0
+  }
+}

@@ -1,0 +1,42 @@
+modules {
+  module {
+    name     = "sas"
+    language = "python"
+  }
+}
+
+collection_group {
+  collect_every  = 300
+  time_threshold = 60
+
+  metric {
+    name = "sas_count"
+    title = "SAS Studio sessions"
+    value_threshold = 25
+  }
+  metric {
+    name = "sas_total_mem"
+    title = "SAS Studio total memory usage (RSS)"
+    value_threshold = 384.0
+  }
+  metric {
+    name = "sas_avg_mem"
+    title = "SAS Studio average memory usage per session (RSS)"
+    value_threshold = 2.0
+  }
+  metric {
+    name = "sas_max_mem"
+    title = "SAS Studio max memory usage per session (RSS)"
+    value_threshold = 4.0
+  }
+  metric {
+    name = "sas_avg_session_length"
+    title = "SAS Studio average session length"
+    value_threshold = 120.0
+  }
+  metric {
+    name = "sas_max_session_length"
+    title = "SAS Studio max session length"
+    value_threshold = 1440.0
+  }
+}
